@@ -1,0 +1,59 @@
+// 자세히 알아보기 버튼 //
+.link-detail {
+    display: block;
+    width: 190px;
+    height: 50px;
+    border: 2px solid #222;
+    text-align: center;
+    line-height: 46px;
+    /* border size minus */
+    transition: all 0.3s;
+
+    .sc-recommend & {
+        border: 2px solid #fff;
+        position: absolute;
+        bottom: 30px;
+    }
+}
+
+.link-detail:hover {
+    background: #222;
+    color: #fff;
+    .sc-recommend & {
+        background: transparent;
+    }
+}
+
+
+
+// 화살표 버튼 //
+.btn-arr {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    .sc-slide & {
+        &.prev {
+            left: 17.2%;
+        }
+
+        &.next {
+            right: 17.2%;
+        }
+    }
+
+    .sc-review & {
+        &.prev {
+            margin-left: -624px;
+        }
+    }
+
+
+
+}
+
+// 블릿
+.pagination {
+    @include position();
+    bottom: 0;
+}

@@ -1,0 +1,150 @@
+// 슬라이드
+.sc-slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    .slide {
+        display: block;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+// 소개
+.sc-intro {
+    .headline {
+        padding: 90px 0 70px;
+    }
+
+    .inner {
+        display: flex;
+        justify-content: space-between;
+
+        &.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .text-box {
+            width: 510px;
+
+            p {
+                font-size: 18px;
+                line-height: 28px;
+                padding: 50px 0;
+            }
+        }
+    }
+}
+
+// 추천
+.sc-recommend {
+    .headline {
+        padding: 108px 0 60px;
+    }
+
+    .content {
+        position: relative;
+        color: #fff;
+        padding: 93px 0;
+
+
+        .bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            object-fit: cover;
+            z-index: -1;
+
+        }
+
+        .common-inner {
+            .text-box {
+                position: relative;
+                width: 370px;
+                height: 330px;
+                background: rgba(34, 34, 34, .5);
+                padding: 30px 20px;
+
+                h3 {
+                    font-size: 22px;
+                    font-weight: bold;
+                    margin-bottom: 23px;
+                }
+
+                p {
+                    font-size: 18px;
+                    line-height: 28px;
+                }
+            }
+        }
+    }
+}
+
+// 이벤트
+.sc-events {
+    margin-top: 100px;
+
+    .event-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .event-item {
+            width: 500px;
+
+            .text-box {
+                padding: 30px 0;
+
+                em {
+                    display: block;
+                    font-size: 18px;
+                    line-height: 28px;
+                    color: #858585;
+                }
+
+                strong {
+                    margin: 22px 0 18px;
+                    font-size: 22px;
+                    font-weight: bold;
+                    @include ellip(1, auto);
+                }
+
+                p {
+                    @include ellip(2, 28px);
+                    font-size: 18px;
+                    line-height: 28px;
+                }
+            }
+
+            .link-detail {
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
+
+// 리뷰영역
+.sc-review {
+    .headline {
+        padding: 33px 0 35px;
+    }
+
+    .rv-slide {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+
+        & > div {
+            width: 520px;
+        }
+        .text-box {
+
+        }
+
+        
+    }
+}
