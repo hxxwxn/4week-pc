@@ -19,6 +19,7 @@
 .link-detail:hover {
     background: #222;
     color: #fff;
+
     .sc-recommend & {
         background: transparent;
     }
@@ -30,30 +31,48 @@
 .btn-arr {
     position: absolute;
     top: 50%;
-    transform: translate(-50%, -50%);
+    left: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 40px;
 
-    .sc-slide & {
-        &.prev {
-            left: 17.2%;
-        }
-
-        &.next {
-            right: 17.2%;
-        }
-    }
-
-    .sc-review & {
+    
         &.prev {
             margin-left: -624px;
         }
-    }
 
-
-
+        &.next {
+            margin-left: 600px;
+        }
+    
 }
+
+
+
 
 // 블릿
 .pagination {
     @include position();
     bottom: 0;
+    display: flex;
+    gap: 11px;
+    height: 80px;
+    align-items: center;
+    .bullet {
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        .sc-slide & {
+            border: 2px solid #fff;
+            &.active {
+                background: #fff;
+            }
+        }
+        .sc-review & {
+            border: 2px solid #ddd;
+            &.active {
+                background: #ddd;
+            }
+        }
+    }
 }

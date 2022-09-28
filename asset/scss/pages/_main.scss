@@ -1,8 +1,6 @@
 // 슬라이드
 .sc-slide {
     position: relative;
-    width: 100%;
-    height: 100%;
 
     .slide {
         display: block;
@@ -34,6 +32,7 @@
                 font-size: 18px;
                 line-height: 28px;
                 padding: 50px 0;
+                text-align: justify;
             }
         }
     }
@@ -78,6 +77,7 @@
                 p {
                     font-size: 18px;
                     line-height: 28px;
+                    text-align: justify;
                 }
             }
         }
@@ -110,11 +110,11 @@
                     margin: 22px 0 18px;
                     font-size: 22px;
                     font-weight: bold;
-                    @include ellip(1, auto);
+                    @include ellip;
                 }
 
                 p {
-                    @include ellip(2, 28px);
+                    @include ellipsis(2, 28px);
                     font-size: 18px;
                     line-height: 28px;
                 }
@@ -129,22 +129,89 @@
 
 // 리뷰영역
 .sc-review {
+    position: relative;
+    padding-bottom: 80px;
     .headline {
-        padding: 33px 0 35px;
+        padding: 33px 0 70px;
     }
-
-    .rv-slide {
-        display: flex;
+    
+    .rv-wrap {
         position: relative;
-        justify-content: space-between;
-
-        & > div {
-            width: 520px;
+        .rv-slide {
+            display: flex;
+            justify-content: space-between;
+    
+            & > div {
+                width: 520px;
+            }
+            .text-box {
+                position: relative;
+                padding: 25px 0;
+                width: 520px;
+                height: 350px;
+                strong {
+                    font-size: 22px;
+                    @include ellip;
+                    font-weight: bold;
+                    line-height: 28px;
+                }
+                p {
+                    font-size: 18px;
+                    @include ellipsis(6,32px);
+                    margin-top: 7px;
+                    text-align: justify;
+                }
+                .link-detail { 
+                    position: absolute;
+                    bottom: 25px;
+                }
+            }
         }
-        .text-box {
+    }
+}
 
+// 게시판
+.sc-board {
+    padding: 30px 0 120px;
+    display: flex;
+    justify-content: space-between;
+
+    .bd-flex {
+        width: 510px;
+
+        .bd-upper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid #ddd;
+            .headline-medium {
+                font-size: 22px;
+                line-height: 40px;
+                font-weight: 500;
+                padding: 10px 0;
+                margin-left: 10px;
+            }
         }
 
-        
+        .bd-list {
+            .bd-item {
+                border-bottom: 1px solid #ddd;
+                a {
+                    display: flex;
+                    margin-left: 10px;
+
+                    .date {
+                        color: #888;
+                        line-height: 60px;
+                    }
+                    .text {
+                        margin-left: 25px;
+                        line-height: 60px;
+                        @include ellip;
+                    
+                    }
+                }
+            }
+        }
     }
 }

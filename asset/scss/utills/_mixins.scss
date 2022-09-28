@@ -15,20 +15,19 @@
     }
 }
 
-@mixin ellip($line,$lineHeight) {
+@mixin ellip {
     overflow:hidden;
     text-overflow: ellipsis;
+    display: block;
+    white-space: nowrap;
+}
 
-    @if ($line > 1) {
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: $line;
-        max-height: $line*$lineHeight;
-        line-height: $lineHeight;
-    }
-
-    @else {
-        display: block;
-        white-space: nowrap;
-    }
+@mixin ellipsis($line,$lineHeight) {
+    text-overflow: ellipsis; 
+    overflow: hidden; 
+    line-height: $lineHeight; 
+    max-height: $lineHeight*$line; 
+    -webkit-box-orient: vertical; 
+    -webkit-line-clamp: $line; 
+    display: -webkit-box; 
 }
