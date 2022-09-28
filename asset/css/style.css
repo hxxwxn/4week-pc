@@ -294,6 +294,26 @@ body {
   background: #ddd;
 }
 
+.top-btn {
+  position: fixed;
+  background: #000;
+  opacity: 0.8;
+  bottom: 65px;
+  right: 75px;
+  border-radius: 50%;
+}
+.top-btn a {
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+.top-btn a img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .sc-slide {
   position: relative;
 }
