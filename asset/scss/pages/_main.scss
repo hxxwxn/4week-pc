@@ -14,7 +14,7 @@
 // 소개
 .sc-intro {
     .headline {
-        padding: 90px 0 70px;
+        padding: 85px 0 64px;
     }
 
     .inner {
@@ -41,7 +41,7 @@
 // 추천
 .sc-recommend {
     .headline {
-        padding: 108px 0 60px;
+        padding: 50px 0 58px;
     }
 
     .content {
@@ -57,7 +57,8 @@
             width: 100%;
             object-fit: cover;
             z-index: -1;
-
+            width: 100%;
+            height: 100%;
         }
 
         .common-inner {
@@ -206,8 +207,9 @@
                     }
                     .text {
                         margin-left: 25px;
-                        line-height: 60px;
-                        @include ellip;
+                        // line-height: 60px;
+                        @include ellipsis(1,60px);
+                        // @include ellip;
                     
                     }
                 }
